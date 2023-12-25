@@ -1,0 +1,50 @@
+.card {
+  padding: 4px 5px 4px 26px;
+  margin-bottom: 20px;
+  height: 100% !important;
+}
+.productName {
+    font-size: 16px;
+}
+.description {
+    font-size: 12px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-edit {
+  font-size: 12px;
+  cursor: pointer;
+  background: #ffdd2d;
+  border-radius: 8px;
+  text-align: center;
+}
+.card-remove {
+    font-size: 12px;
+    cursor: pointer;
+    background: #ed5b2b;
+    border-radius: 8px;
+    text-align: center;
+}
+.setupStartValue, #form-product .btn{
+  padding: 10px 24px;
+  background: #ffdd2d;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+}
+.setupStartValue:hover, #form-product .btn:hover, .card-edit:hover {
+  background: #fcc521;
+}
+.setupStartValue:active, #form-product .btn:active, .card-edit:active {
+  background: #fab619;
+}
+.setupStartValue:focus, #form-product .btn:focus, .card-edit:focus {
+  background: #ffdd2d;
+}
+#form-product input,
+#form-product textarea {
+    color: black;
+  background: #d9d9d9;
+}
