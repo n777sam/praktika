@@ -1,18 +1,30 @@
-import React from 'react';
+import { useState } from 'react'
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
+interface Props {
+  initialValue?: string | string[]
+  label?: string
+  onChange?: (value: React.ChangeEvent<HTMLInputElement>) => void
+  name: string
+  placeholder?: string
 }
 
-const InputField: React.FC<InputProps> = ({ label, ...rest }) => {
+const InputField: React.FC<Props> = ({ initialValue = '', onChange, label, name, placeholder }) => {
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(event)
+    }
+  }
+
   return (
+
     <div className='input-box'>
       {label && (
         <label htmlFor=''>{label}</label>
       )}
-      <input {...rest} />
+      <input type="text" name={name} value={initialValue} onChange={handleChange} placeholder={placeholder} />
     </div>
-  );
-};
+  )
+}
 
-export default InputField;
+export default InputField

@@ -1,8 +1,7 @@
-import React from 'react';
 import Button from './Button'
 
 interface HeaderProps {
-  title: string;
+  title: string
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
@@ -15,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             </div>
         </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

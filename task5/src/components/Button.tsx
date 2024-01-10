@@ -1,8 +1,6 @@
-import React from 'react';
-
 interface ButtonProps {
-  text: string;
-  onClick?: () => void;
+  text: string
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
@@ -10,7 +8,7 @@ const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
     <button className="btn" onClick={onClick}>
       {text}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
